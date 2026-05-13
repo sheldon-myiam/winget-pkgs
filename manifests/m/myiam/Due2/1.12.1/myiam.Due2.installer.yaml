@@ -1,0 +1,27 @@
+# Created with WinGet Releaser using komac v2.16.0
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+
+PackageIdentifier: myiam.Due2
+PackageVersion: 1.12.1
+InstallerLocale: en-US
+MinimumOSVersion: 10.0.17763.0
+InstallerType: inno
+Scope: machine
+InstallerSwitches:
+  Silent: /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
+  SilentWithProgress: /SILENT /SUPPRESSMSGBOXES /NORESTART /SP-
+Dependencies:
+  PackageDependencies:
+  - PackageIdentifier: Microsoft.VCRedist.2015+.x64
+ProductCode: '{B8F2E3A1-5C7D-4E9F-A6B0-1D2E3F4A5B6C}_is1'
+ReleaseDate: 2026-05-13
+AppsAndFeaturesEntries:
+- ProductCode: '{B8F2E3A1-5C7D-4E9F-A6B0-1D2E3F4A5B6C}_is1'
+InstallationMetadata:
+  DefaultInstallLocation: '%ProgramFiles%\Due2'
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/myiam-io/homebrew-tap/releases/download/due2-v1.12.1/due2-1.12.1-windows-x64-setup.exe
+  InstallerSha256: 8692A1A6C84691F00FFB002C4E35005A2533843EE89D0C83DED15D1236DBECC0
+ManifestType: installer
+ManifestVersion: 1.12.0
